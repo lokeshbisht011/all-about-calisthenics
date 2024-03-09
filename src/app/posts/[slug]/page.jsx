@@ -73,7 +73,7 @@ const SinglePage = async ({ params }) => {
       </div>
       <div className={styles.line}></div>
       <div className={styles.bottomElements}>
-        <RelatedPosts categories={data.categories} postSlug={slug} />
+        {/* <RelatedPosts categories={data.categories} postSlug={slug} /> */}
       </div>
     </div>
   );
