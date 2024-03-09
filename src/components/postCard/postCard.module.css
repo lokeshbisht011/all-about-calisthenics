@@ -1,0 +1,91 @@
+.container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  background-color: #131313;
+}
+
+.imageContainer {
+  height: 250px;
+  position: relative;
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.categoryContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.category {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: white;
+  width: max-content;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1280px) {
+  .imageContainer {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 64px;
+  }
+
+  .subTitle {
+    font-size: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .subTitle {
+    font-size: 12px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
