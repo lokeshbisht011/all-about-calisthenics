@@ -15,6 +15,11 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'images.pexels.com',
             pathname: '**'
+        },
+        {
+            protocol: 'https',
+            hostname: 'lh5.googleusercontent.com',
+            pathname: '**'
         }]
     }
 };
