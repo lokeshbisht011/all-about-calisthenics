@@ -1,31 +1,25 @@
 import Image from 'next/image'
 import React from 'react'
-import styles from './calisthenicsGymBangalore.module.css'
+import styles from './calisthenicsGymPune.module.css'
 import Link from 'next/link'
-import gymsData from '/public/calisthenics_gyms_bangalore.json'
+import gymsData from '/public/calisthenics_gyms_pune.json'
 import PopularPosts from '@/components/popularPostMenu/PopularPostMenu'
 
-const bangaloreImage = 'https://images.unsplash.com/photo-1596796679119-7cf1a9e5448b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFuZ2Fsb3JlfGVufDB8fDB8fHww'
+const puneImage = 'https://images.unsplash.com/photo-1618805714320-f8825019c1be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHVuZXxlbnwwfHwwfHx8MA%3D%3D'
 
 const page = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
                 <div className={styles.blogContainer}>
-                    <h1 className={styles.title}>Best Calisthenics Gyms in Bangalore</h1>
+                    <h1 className={styles.title}>Best Calisthenics Gyms in Pune</h1>
                     <div className={styles.coverImageContainer}>
-                        <Image src={bangaloreImage} alt="" placeholder="blur" blurDataURL="/placeholder.jpeg" fill className={styles.coverImg} />
+                        <Image src={puneImage} alt="" placeholder="blur" blurDataURL="/placeholder.jpeg" fill className={styles.coverImg} />
                     </div>
                     <div className={styles.content}>
-                        <p>Welcome to the ultimate guide to calisthenics gyms in Bangalore!
-                            If you're looking to break a sweat, build strength, and join a vibrant fitness community,
-                            you've come to the right place. Bangalore is not only known for its tech scene but also
-                            for its thriving fitness culture, especially when it comes to calisthenics.
-                            Whether you're a beginner or a seasoned pro, this blog will take you on a journey
-                            through the best calisthenics gyms in the city, along with tips, reviews,
-                            and inspiring stories from fellow fitness enthusiasts.
-                            These are the best calisthenics gyms in Bangalore.</p>
-
+                        <p>Embark on a fitness journey like no other in Pune, where the vibrant culture meets a thriving calisthenics scene. 
+                            If you're eager to strengthen your body, break a sweat, and be part of a dynamic fitness community, 
+                            you're in the right place. These are the best calisthenics park in Pune.</p>
                         {gymsData.gyms.map((gym, index) => (
                             <div key={index}>
                                 <h1 className={styles.subtitle}>{index + 1}. {gym.name}</h1>
