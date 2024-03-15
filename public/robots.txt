@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.allaboutcalisthenics.com
+
+# Sitemaps
+Sitemap: https://www.allaboutcalisthenics.com/sitemap.xml

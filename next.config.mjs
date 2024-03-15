@@ -20,6 +20,11 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'lh5.googleusercontent.com',
             pathname: '**'
+        },
+        {
+            protocol: 'https',
+            hostname: 'static.wixstatic.com',
+            pathname: '**'
         }]
     }
 };
