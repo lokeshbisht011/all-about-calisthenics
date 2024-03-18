@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Pushups",
+    "description": "The push-up is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of the deltoids, serratus anterior, coracobrachialis and the midsection as a whole.",
+    "image": "https://images.unsplash.com/photo-1598971457999-ca4ef48a9a71?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHVzaHVwc3xlbnwwfHwwfHx8MA%3D%3D",
+    "youtubeLinks": "https://www.youtube.com/watch?v=IODxDxX7oi4&pp=ygUPUHVzaHVwIHR1dG9yaWFs, https://www.youtube.com/watch?v=-WXc4E-zcao&pp=ygUPUHVzaHVwIHR1dG9yaWFs",
+    "youtubeTitles": "The Perfect Push Up, Master the Push-up"
+  },
+  {
+    "title": "Human Flag",
+    "description": "The human flag is a feat of strength where the body is parallel to the ground supported by a vertical bar. A straight line is formed using the arms and body. The trick requires the performer to have extensive upper body strength.",
+    "image": "https://t3.ftcdn.net/jpg/00/66/61/92/240_F_66619256_j7TmAVaRFZVPJxSttivwlOpg2GsB67cf.jpg",
+    "youtubeLinks": "https://www.youtube.com/watch?v=y4Vwwz8vV2U&pp=ygUTSHVtYW4gRmxhZyB0dXRvcmlhbA%3D%3D, https://www.youtube.com/watch?v=TF9XhvYh_m8&pp=ygUTSHVtYW4gRmxhZyB0dXRvcmlhbA%3D%3D",
+    "youtubeTitles": "How to do HUMAN FLAG, How To Human Flag The Easiest Way"
+  },
+  {
+    "title": "Pike Pushups",
+    "description": "Pike push-ups are a difficult version of the traditional push-up that emphasizes your shoulder muscles. Incorporating this type of push-up into your exercise routine can help build additional strength, muscle mass and improve weak areas in your shoulders.",
+    "image": "https://t3.ftcdn.net/jpg/01/28/46/62/240_F_128466251_KW3pGiS9J84aUJNPimXT7SDZroezZJjj.jpg",
+    "youtubeLinks": "https://www.youtube.com/watch?v=66x0qQiJ-MA&pp=ygUVcGlrZSBwdXNodXBzIHR1dG9yaWFs, https://www.youtube.com/watch?v=fXgou2W10ok&pp=ygUVcGlrZSBwdXNodXBzIHR1dG9yaWFs",
+    "youtubeTitles": "Pike Push Up Beginner Tutorial, How to Pike Push Up"
+  },
+  {
+    "title": "Neutral Grip",
+    "description": "A grip that is neither supinated nor pronated, but with palms facing each other. While doing parallel bar dips, you use a neutral grip.",
+    "image": "https://media.istockphoto.com/id/579759308/photo/young-sportsman-doing-dips-in-parallel-bars.jpg?s=612x612&w=0&k=20&c=XrD1Ml_L4fiEdBqHb389iqGrxxWGzGN6Hz3UTHc3ehY=",
+    "youtubeLinks": "",
+    "youtubeTitles": ""
+  },
+  {
+    "title": "Supinated Grip",
+    "description": "The supinated grip is also known as an underhand or palms-up grip. When you're using this grip, your palms should be facing, you guessed it, upwards. A supinated grip activates your biceps brachii, brachialis, and brachioradialis – all of which are muscles in the front of the upper arm that play a significant role in elbow flexion and forearm supination. While doing chinups, you use a supinated grip.",
+    "image": "https://media.istockphoto.com/id/855620696/photo/cross-training.jpg?s=612x612&w=0&k=20&c=p5HXLWIiX5AN-kxBVW6B_6MkTKadG2VvFNDJymIyOsU=",
+    "youtubeLinks": "",
+    "youtubeTitles": ""
+  },
+  {
+    "title": "Pronated Grip",
+    "description": "The pronated grip, also known as overhand or palms-down grip, is a grip where the palms face downwards. With a pronated grip, the emphasis is on the lats, rhomboids, and deltoids - all large muscles in the upper back and shoulders. While doing pullups, you use a supinated grip.",
+    "image": "https://media.istockphoto.com/id/1028271392/photo/muscular-man-training-his-back.jpg?s=612x612&w=0&k=20&c=osNOzRBERLXKCG6Ugcr8uOdNBICFnolYixDE8S28M08=",
+    "youtubeLinks": "",
+    "youtubeTitles": ""
+  }
+]
