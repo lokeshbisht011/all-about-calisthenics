@@ -26,10 +26,6 @@ const page = () => {
 
                         <h1 className="font-bold text-3xl mt-4 mb-4">Benefits of Calisthenics</h1>
                         <p></p>
-                        
-                        
-                        
-                        
                         <div className="h-[350px] relative items-center mb-4 border-[0.1px] border-opacity-30 border-solid border-white">
                             <Image src={coverImage} alt="" placeholder="blur" blurDataURL="/placeholder.jpeg" fill className="object-cover" />
                         </div>
