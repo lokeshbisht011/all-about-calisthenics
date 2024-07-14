@@ -2,32 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.default {
+  background-color: #775aec;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.fitness {
+  background-color: #ff7857;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.calisthenics {
+  background-color: #ffb14f;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.gyms {
+  background-color: #7fb881;
 }
+
+.parks {
+  background-color: #ff7887;
+}
+
+.dip-belts {
+  background-color: #775aec;
+}
+
+.amazon {
+  background-color: #775aec;
+}
+
+.strength-training {
+  background-color: #7fb881;
+}
+
+.home-workout {
+  background-color: #775aec;
+}
+
+.resistance-bands {
+  background-color: #775aec;
+}
+
+.beginner {
+  background-color: #7fb881;
+}
+

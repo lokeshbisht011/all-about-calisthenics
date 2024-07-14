@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,26 +15,28 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-
         <Script
           strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
-
         <Script id="ga-script" strategy="lazyOnload">
           {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${process.env.GOOGLE_ANALYTICS_TAG}'
-    });
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+          });
         `}
         </Script>
 
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4080624113623119"
-          crossorigin="anonymous"></Script>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4080624113623119"
+          crossorigin="anonymous"
+        ></Script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-900`}>
         <Navbar />
         {children}
         <Footer />

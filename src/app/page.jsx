@@ -1,16 +1,16 @@
-import Hero from "@/components/hero/Hero";
-import styles from "./homepage.module.css"
-import RecentPosts from "@/components/recentPostsMenu/RecentPostsMenu";
+
+import Hero from "@/components/Hero";
+import RecentPostsMenu from "@/components/RecentPostsMenu";
 
 export default function Home({ searchParams }) {
 
   const page = parseInt(searchParams.page) || 1;
 
   return (
-    <div className={styles.container}>
+    <div className="">
       <Hero />
-      <div className={styles.content}>
-        <RecentPosts page={page}/>
+      <div className="flex bg-gray-900 text-white">
+        <RecentPostsMenu page={page}/>
       </div>
     </div>
   );
