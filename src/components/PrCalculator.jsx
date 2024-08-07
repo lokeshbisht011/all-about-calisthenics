@@ -82,7 +82,7 @@ const PRCalculator = () => {
   }, [weight, reps, selectedFormula]);
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md -mt-16">
+    <div className="max-w-md mx-auto p-6 bg-gray-50 rounded-lg shadow-md -mt-16">
       <h2 className="text-2xl font-bold mb-4">One Rep Max Calculator</h2>
       <div className="mb-4">
         <label className="block text-gray-700 mb-2" htmlFor="exercise">
