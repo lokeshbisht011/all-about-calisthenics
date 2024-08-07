@@ -9,12 +9,12 @@ const formulas = {
   epley: {
     calculate: (weight, reps) => weight * (1 + reps / 30),
     description:
-      "Epley's formula: 1RM = weight * (1 + reps / 30). This formula is often used because it accounts for both weight and reps, providing a balanced estimate.",
+      "Epley's formula: 1RM = weight * (1 + reps / 30). This formula accounts for both weight and reps, providing a balanced estimate.",
   },
   brzycki: {
     calculate: (weight, reps) => weight * (36 / (37 - reps)),
     description:
-      "Brzycki's formula: 1RM = weight * (36 / (37 - reps)). This formula is commonly used and is known for its simplicity and accuracy for reps under 10.",
+      "Brzycki's formula: 1RM = weight * (36 / (37 - reps)). This formula is known for its simplicity and accuracy for reps under 10.",
   },
   lander: {
     calculate: (weight, reps) => weight / (1.013 - 0.0267123 * reps),
@@ -120,10 +120,14 @@ const PRCalculator = () => {
           <FontAwesomeIcon
             icon={faInfoCircle}
             data-tooltip-id="formula-info"
-            data-tooltip-content={formulas[selectedFormula].description}
+            // data-tooltip-html={`<div>${formulas[selectedFormula].description}</div>`}
             className="ml-2 text-blue-500 cursor-pointer"
           />
-          <ReactTooltip id="formula-info" place="right" className="text-sm" />
+          <ReactTooltip id="formula-info">
+            <span className="flex max-w-xs text-xs">
+              {formulas[selectedFormula].description}
+            </span>
+          </ReactTooltip>
         </div>
       </div>
       <div className="mb-4">
