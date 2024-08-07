@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="bg-gray-900 text-white">
+    <section className="bg-white text-black border-b">
       <div className="container mx-auto flex flex-col items-center justify-center py-10 px-5 text-center">
         <motion.h1
           className="text-5xl font-bold leading-tight sm:text-6xl"

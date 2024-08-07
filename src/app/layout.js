@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           crossorigin="anonymous"
         ></Script>
       </head>
-      <body className={`${inter.className} bg-gray-900`}>
+      <body className={`${inter.className}`}>
         <Navbar />
         {children}
         <Footer />

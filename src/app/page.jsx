@@ -9,7 +9,7 @@ export default function Home({ searchParams }) {
   return (
     <div className="">
       <Hero />
-      <div className="flex bg-gray-900 text-white">
+      <div className="flex bg-white text-black">
         <RecentPostsMenu page={page}/>
       </div>
     </div>
