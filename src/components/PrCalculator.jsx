@@ -162,7 +162,7 @@ const PRCalculator = () => {
       </button>
       {oneRepMax && (
         <div className="mt-4 p-4 bg-green-100 text-green-800 rounded">
-          <h3 className="text-xl font-semibold">
+          <h3 className="text-sm font-semibold">
             Estimated 1RM for {selectedExercise}: {oneRepMax} kg
           </h3>
         </div>
