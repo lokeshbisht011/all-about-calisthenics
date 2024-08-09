@@ -16,7 +16,7 @@ async function getDocFromParams(slug) {
 const page = async ({ params }) => {
   const doc = await getDocFromParams(params.slug);
   return (
-    <div className="mx-auto max-w-2xl p-5 mt-5 mb-5 bg-gray-900 text-white">
+    <div className="mx-auto max-w-2xl p-5 mt-5 mb-5 bg-gray-50 shadow-lg text-black">
       <Mdx code={doc.body.code} />
     </div>
   );

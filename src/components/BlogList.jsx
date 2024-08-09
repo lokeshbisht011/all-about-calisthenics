@@ -13,7 +13,7 @@ const BlogList = ({ posts }) => {
             href={`/blogs/${post.slug}`}
             className="h-full flex flex-col justify-between"
           >
-            <h2 className="text-2xl font-semibold">{post.title}</h2>
+            <h2 className="text-2xl font-semibold line-clamp-2 ">{post.title}</h2>
             <div className="md:h-72 md:w-full h-[140px] w-full relative my-5">
               <Image
                 src={post.images.cover}
