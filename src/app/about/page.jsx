@@ -2,10 +2,10 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <div className="pt-5 bg-gray-900 text-white min-h-screen">
-      <h1 className="text-white text-center capitalize">About</h1>
+    <div className="pt-5 bg-white text-black min-h-screen">
+      <h1 className="text-5xl text-center capitalize">About</h1>
       <div className="border border-white border-opacity-30 mx-7 mt-5"></div>
-      <h1 className="mx-80 mt-5 pb-5 text-2xl font-light text-center text-white md:mx-7 md:text-lg">
+      <h1 className="mx-80 mt-5 pb-5 text-2xl font-light text-center md:mx-7 md:text-lg">
         <b>
           Welcome to All About Calisthenics, your ultimate resource for all things related to bodyweight fitness and calisthenics.
           <br /><br />
