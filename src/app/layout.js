@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <head>
         <Script
           strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
         />
 
         <Script id="ga-script" strategy="lazyOnload">
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}')
+    gtag('config', '${process.env.GOOGLE_ANALYTICS_TAG}')
         `}
         </Script>
 
