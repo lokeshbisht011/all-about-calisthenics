@@ -1,0 +1,6 @@
+[
+  { "name": "Push-Up", "type": "reps" },
+  { "name": "Pull-Up", "type": "reps" },
+  { "name": "Plank", "type": "time" },
+  { "name": "Squat", "type": "reps" }
+]
