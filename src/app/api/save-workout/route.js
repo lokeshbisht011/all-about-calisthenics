@@ -1,5 +1,4 @@
-// pages/api/save-workout.js
-import prisma from '../../lib/prisma'; // Adjust the import path accordingly
+// pages/api/save-workout.js // Adjust the import path accordingly
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
