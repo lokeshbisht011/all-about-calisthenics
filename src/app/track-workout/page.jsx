@@ -5,6 +5,13 @@ import { useState } from "react";
 import WorkoutTracker from "@/components/WorkoutTracker";
 import StartWorkout from "@/components/StartWorkout";
 
+// export async function generateMetadata() {
+//   return {
+//     title: "Track Your Workout",
+//     description: "Track Your Workout",
+//   };
+// }
+
 const page = () => {
   const [loading, setLoading] = useState(false);
 

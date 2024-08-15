@@ -1,6 +1,13 @@
 import BlogList from "@/components/BlogList";
 import { allBlogs } from "contentlayer/generated";
 
+export async function generateMetadata() {
+  return {
+    title: "All About Calisthenics - Blogs",
+    description: "All About Calisthenics : Blogs",
+  };
+}
+
 const BlogPage = ({ searchParams }) => {
   const { category } = searchParams;
   const blogs = allBlogs;
@@ -11,7 +18,6 @@ const BlogPage = ({ searchParams }) => {
 
   const shuffledBlogs = [...filteredBlogs];
 
-  // Fisher-Yates shuffle algorithm to randomize the blogs
   for (let i = shuffledBlogs.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledBlogs[i], shuffledBlogs[j]] = [shuffledBlogs[j], shuffledBlogs[i]];

@@ -1,3 +1,10 @@
+export async function generateMetadata() {
+  return {
+    title: "All About Calisthenics - Contact",
+    description: "All About Calisthenics - Contact",
+  };
+}
+
 const ContactPage = () => {
   return (
     <div className="pt-5 bg-white text-black min-h-screen">

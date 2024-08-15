@@ -4,6 +4,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+export async function generateMetadata() {
+  return {
+    title: "All About Calisthenics - Glossary",
+    description: "All About Calisthenics - Glossary",
+  };
+}
+
 const getAllKeywords = () => {
   const filePath = path.join(process.cwd(), "public/glossary.json");
   const fileContents = fs.readFileSync(filePath, "utf8");

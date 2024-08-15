@@ -1,5 +1,12 @@
 import React from 'react';
 
+export async function generateMetadata() {
+  return {
+    title: "All About Calisthenics - About",
+    description: "All About Calisthenics - About",
+  };
+}
+
 const AboutPage = () => {
   return (
     <div className="pt-5 bg-white text-black min-h-screen">

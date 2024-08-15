@@ -1,5 +1,11 @@
 import PRCalculator from "@/components/PrCalculator";
 
+export async function generateMetadata() {
+  return {
+    title: "One Rep Max Calculator",
+    description: "One Rep Max Calculator",
+  };
+}
 
 const PRCalculatorPage = () => {
   return (
