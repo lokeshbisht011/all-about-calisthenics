@@ -2,6 +2,7 @@ import React from "react";
 import { allBlogs } from "contentlayer/generated";
 import Link from "next/link";
 import Image from "next/image";
+import BlogList from "./BlogList";
 
 const RelatedBlogs = ({ currentBlogTags, currentBlogId }) => {
   const getRelatedBlogs = (tags, currentBlogId) => {
@@ -19,7 +20,7 @@ const RelatedBlogs = ({ currentBlogTags, currentBlogId }) => {
           blog._id !== currentBlogId &&
           blog.tags.some((tag) => tags.includes(tag))
       )
-    ).slice(0, 6);
+    ).slice(0, 9);
 
     return relatedBlogs;
   };
@@ -27,29 +28,10 @@ const RelatedBlogs = ({ currentBlogTags, currentBlogId }) => {
   const relatedBlogs = getRelatedBlogs(currentBlogTags, currentBlogId);
 
   return (
-    <div className="container mx-auto px-4 mt-5 text-text">
+    <div className="container mx-auto p-4 mt-8 text-text border-t">
       <h2 className="text-center font-bold text-3xl">Related Blogs</h2>
-      <div className="flex flex-wrap gap-5 mt-5">
-        {relatedBlogs.map((post) => (
-          <div
-            key={post.slug}
-            className="flex flex-col p-4 border rounded-md shadow-md w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)]"
-          >
-            <Link
-              href={`/${post._raw.flattenedPath}`}
-              className="h-full flex flex-col justify-between"
-            >
-              <h2 className="text-2xl font-semibold">{post.title}</h2>
-              <img
-                src={post.images.cover}
-                fill
-                alt={post.title}
-                className="mt-5 mb-5"
-              />
-              <p className="text-xl line-clamp-2">{post.summary}</p>
-            </Link>
-          </div>
-        ))}
+      <div className="flex flex-wrap gap-5 mt-4 mb-4">
+        <BlogList posts={relatedBlogs} />
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ const BlogList = ({ posts }) => {
             className="h-full flex flex-col justify-between"
           >
             <h2 className="text-2xl font-semibold line-clamp-2">{post.title}</h2>
-            <div className="md:h-72 md:w-full h-[140px] w-full relative my-4">
+            <div className="md:h-72 md:w-full h-[200px] w-full relative my-4">
               <Image
                 src={post.images.cover}
                 fill
