@@ -15,6 +15,7 @@ export type Blog = {
   type: 'Blog'
   title: string
   date: IsoDateTimeString
+  author?: string | undefined
   tags: string[]
   summary?: string | undefined
   images?: any | undefined
