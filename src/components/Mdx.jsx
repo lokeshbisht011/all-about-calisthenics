@@ -8,7 +8,7 @@ const components = {
     h1: ({ className, ...props }) => (
         <h1
             className={cn(
-                "mt-2 scroll-m-20 text-4xl font-bold tracking-tight text-center",
+                "mt-2 scroll-m-20 md:text-4xl text-3xl font-bold tracking-tight text-center",
                 className
             )}
             {...props}
