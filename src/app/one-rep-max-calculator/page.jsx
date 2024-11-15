@@ -9,7 +9,7 @@ export async function generateMetadata() {
 
 const PRCalculatorPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-radial from-green-400 to-blue-500">
+    <div className="min-h-screen flex items-center justify-center">
       <PRCalculator />
     </div>
   );
