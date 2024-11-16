@@ -268,7 +268,7 @@ export default function ExerciseTracker() {
                   <div key={set.id} className="flex items-center gap-2">
                     <Input
                       type="number"
-                      placeholder="Number of reps"
+                      placeholder="Reps"
                       value={set.reps || ''}
                       onChange={(e) => handleUpdateSet(set.id, parseInt(e.target.value) || 0)}
                       className="w-24"
