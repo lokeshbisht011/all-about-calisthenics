@@ -28,28 +28,16 @@ export default function RootLayout({ children }) {
     gtag('config', '${process.env.GOOGLE_ANALYTICS_TAG}')
         `}
         </Script>
-
-        {/* 
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4080624113623119"
           crossorigin="anonymous"
-        ></Script> */}
+        ></Script>
       </head>
       <body className={`${inter.className}`}>
         <Navbar />
         {children}
         <Footer />
-        <Script id="infolinks-script" strategy="afterInteractive">
-          {`
-            var infolinks_pid = 3425935; 
-            var infolinks_wsid = 0;
-          `}
-        </Script>
-        <Script
-          strategy="afterInteractive"
-          src="//resources.infolinks.com/js/infolinks_main.js"
-        />
       </body>
     </html>
   );
