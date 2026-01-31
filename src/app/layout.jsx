@@ -37,6 +37,11 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
         <Navbar />
         {children}
+        <Script
+          src="https://tally.so/widgets/embed.js"
+          strategy="afterInteractive"
+        />
+
         <Footer />
       </body>
     </html>
