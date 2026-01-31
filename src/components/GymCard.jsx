@@ -4,15 +4,16 @@ import Link from "next/link";
 export default function GymCard({
   name,
   image,
-  location,
-  map,
+  locations,
   description,
   website,
   instagram,
 }) {
   return (
-    <section className="space-y-4">
-      <div className="relative aspect-[16/9] overflow-hidden rounded-xl border">
+    <section className="mt-10">
+      <h2 className="text-xl font-semibold">{name}</h2>
+
+      <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-xl border">
         <Image
           src={image}
           alt={name}
@@ -22,33 +23,27 @@ export default function GymCard({
         />
       </div>
 
-      <h2 className="text-xl font-semibold">{name}</h2>
-
-      <p className="text-sm text-muted-foreground">
-        📍{" "}
-        {location.split(",").map((loc, index) => {
-          const maps = map?.split(",");
-          const mapLink = maps?.[index]?.trim();
-          const label = loc.trim();
-
-          return (
-            <span key={index}>
-              {mapLink ? (
-                <Link href={mapLink} target="_blank" className="underline">
-                  {label}
-                </Link>
-              ) : (
-                label
-              )}
-              {index < location.split(",").length - 1 && ", "}
+      <div className="mt-4 space-y-2 text-sm text-muted-foreground">
+        <p>
+          📍{" "}
+          {locations.map((loc, i) => (
+            <span key={i}>
+              <Link
+                href={loc.map}
+                target="_blank"
+                className="underline underline-offset-4"
+              >
+                {loc.label}
+              </Link>
+              {i < locations.length - 1 && ", "}
             </span>
-          );
-        })}
-      </p>
+          ))}
+        </p>
+      </div>
 
-      <p className="leading-relaxed text-muted-foreground">{description}</p>
+      <p className="mt-4 leading-relaxed text-muted-foreground">{description}</p>
 
-      <div className="flex flex-wrap gap-4 text-sm">
+      <div className="mt-4 flex flex-wrap gap-4 text-sm">
         {website && (
           <Link href={website} target="_blank" className="underline">
             Website
