@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { competitions } from "@/lib/competitionData";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/Card";
 
 export function generateMetadata({ params }) {
   const comp = competitions.find((c) => c.slug === params.slug);
