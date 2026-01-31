@@ -12,4 +12,17 @@ export const competitions = [
     youtube: null,
     results: null
   },
+  {
+    slug: "calisthenics-world-championship-2026",
+    name: "Calisthenics World Championship 2026",
+    date: "2026-06-12",
+    city: "Rome",
+    country: "Italy",
+    poster: "https://wswcf.org/wp-content/uploads/2026/01/logo_italia_2026-1_page-0001.jpg",
+    description: "Organized by (Local Organizing Committee - LOC): ASD Eagle Association together with Federazione Nazionale Liberi Circoli (FENALC). Under the patronage of: Sport e Salute S.p.A.",
+    website: "https://wswcf.org/",
+    instagram: null,
+    youtube: null,
+    results: null
+  },
 ];
