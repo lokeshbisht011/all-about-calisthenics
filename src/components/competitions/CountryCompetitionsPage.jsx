@@ -8,6 +8,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { notFound } from "next/navigation";
+import { CompetitionCard } from "./CompetitionCard";
+import { formatCompetitionDates } from "@/lib/utils";
+import { MissingCompetitionCTA } from "./MissingCompetitionCTA";
 
 export default function CountryCompetitionsPage({ country }) {
   const today = new Date();
@@ -23,9 +26,12 @@ export default function CountryCompetitionsPage({ country }) {
     [country]
   );
 
+  if (countryCompetitions.length === 0) notFound();
+
   const filteredCompetitions = useMemo(() => {
     return countryCompetitions.filter((c) => {
-      const date = new Date(c.date);
+      const start = new Date(c.startDate || c.date);
+      const end = new Date(c.endDate || c.startDate || c.date);
       const matchesSearch =
         c.name.toLowerCase().includes(search.toLowerCase()) ||
         c.city.toLowerCase().includes(search.toLowerCase());
@@ -34,25 +40,19 @@ export default function CountryCompetitionsPage({ country }) {
         tab === "all"
           ? true
           : tab === "upcoming"
-          ? date >= today
-          : date < today;
+          ? end >= today
+          : end < today;
 
       return matchesSearch && matchesTab;
     });
   }, [countryCompetitions, search, tab]);
 
   const upcoming = filteredCompetitions.filter(
-    (c) => new Date(c.date) >= today
+    (c) => new Date(c.endDate || c.startDate || c.date) >= today
   );
   const past = filteredCompetitions.filter(
-    (c) => new Date(c.date) < today
+    (c) => new Date(c.endDate || c.startDate || c.date) < today
   );
-
-  if (countryCompetitions.length === 0) {
-    return (
-      notFound()
-    )
-  }
 
   return (
     <div className="space-y-20">
@@ -104,28 +104,12 @@ export default function CountryCompetitionsPage({ country }) {
           <h2 className="text-2xl font-semibold">Upcoming Competitions</h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcoming.map((comp) => (
-              <Link key={comp.slug} href={`/competitions/${comp.slug}`}>
-                <Card className="hover:shadow-lg transition">
-                  {comp.poster && (
-                    <img
-                      src={comp.poster}
-                      alt={comp.name}
-                      className="rounded-t-xl aspect-video object-cover"
-                    />
-                  )}
-                  <CardContent className="p-4 space-y-2">
-                    <h3 className="font-semibold">{comp.name}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {comp.city}
-                    </p>
-                    <Badge variant="secondary">
-                      {new Date(comp.date).toDateString()}
-                    </Badge>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+            {upcoming.map((comp) => {
+              const dateText = formatCompetitionDates(comp.startDate || comp.date, comp.endDate);
+              return (
+                <CompetitionCard comp={comp}/>
+              );
+            })}
           </div>
         </section>
       )}
@@ -136,21 +120,12 @@ export default function CountryCompetitionsPage({ country }) {
           <h2 className="text-2xl font-semibold">Past Competitions</h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 opacity-80">
-            {past.map((comp) => (
-              <Link key={comp.slug} href={`/competitions/${comp.slug}`}>
-                <Card className="hover:shadow-md transition">
-                  <CardContent className="p-4 space-y-2">
-                    <h3 className="font-medium">{comp.name}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {comp.city}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      {new Date(comp.date).toDateString()}
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+            {past.map((comp) => {
+              const dateText = formatCompetitionDates(comp.startDate || comp.date, comp.endDate);
+              return (
+                <CompetitionCard comp={comp}/>
+              );
+            })}
           </div>
         </section>
       )}
@@ -211,6 +186,7 @@ export default function CountryCompetitionsPage({ country }) {
             Calisthenics Gyms
           </Link>
         </div>
+        <MissingCompetitionCTA />
       </section>
 
       {/* ================= SUBSCRIBE ================= */}

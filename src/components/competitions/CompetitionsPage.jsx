@@ -3,6 +3,9 @@
 import React, { useMemo, useState } from "react";
 import { competitions } from "@/lib/competitionData";
 import Link from "next/link";
+import { formatCompetitionDates } from "@/lib/utils";
+import { CompetitionCard } from "./CompetitionCard";
+import { MissingCompetitionCTA } from "./MissingCompetitionCTA";
 
 export const CompetitionsPage = () => {
   const [search, setSearch] = useState("");
@@ -19,14 +22,15 @@ export const CompetitionsPage = () => {
 
   const filteredCompetitions = useMemo(() => {
     let list = competitions.filter((comp) => {
-      const compDate = new Date(comp.date);
+      const compStart = new Date(comp.startDate || comp.date);
+      const compEnd = new Date(comp.endDate || comp.date);
 
       const matchesTab =
         tab === "all"
           ? true
           : tab === "upcoming"
-          ? compDate >= today
-          : compDate < today;
+          ? compEnd >= today
+          : compEnd < today;
 
       const matchesSearch =
         comp.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -40,10 +44,11 @@ export const CompetitionsPage = () => {
 
     // Sorting
     list = [...list].sort((a, b) => {
-      if (sort === "date-desc")
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
-      if (sort === "date-asc")
-        return new Date(a.date).getTime() - new Date(b.date).getTime();
+      const aDate = new Date(a.startDate || a.date).getTime();
+      const bDate = new Date(b.startDate || b.date).getTime();
+
+      if (sort === "date-desc") return bDate - aDate;
+      if (sort === "date-asc") return aDate - bDate;
       if (sort === "name") return a.name.localeCompare(b.name);
       return 0;
     });
@@ -56,17 +61,13 @@ export const CompetitionsPage = () => {
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black text-white">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_#ffffff33,_transparent_60%)]" />
-
         <div className="relative container mx-auto max-w-6xl px-4 py-28 text-center">
           <span className="inline-block mb-4 rounded-full bg-white/10 px-4 py-1 text-sm tracking-wide">
             Global Calisthenics Events
           </span>
-
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Calisthenics <br className="hidden sm:block" />
-            Competitions
+            Calisthenics <br className="hidden sm:block" /> Competitions
           </h1>
-
           <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
             Explore upcoming and past calisthenics competitions across the world
             — battles, freestyle events, endurance meets, and championships.
@@ -98,7 +99,11 @@ export const CompetitionsPage = () => {
               key={t}
               onClick={() => setTab(t)}
               className={`px-4 py-2 rounded-full text-sm font-medium border transition
-        ${tab === t ? "bg-black text-white" : "bg-white hover:bg-gray-100"}`}
+                ${
+                  tab === t
+                    ? "bg-black text-white"
+                    : "bg-white hover:bg-gray-100"
+                }`}
             >
               {t === "upcoming" && "Upcoming"}
               {t === "past" && "Past"}
@@ -143,38 +148,21 @@ export const CompetitionsPage = () => {
 
         {/* RESULTS */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCompetitions.map((comp) => (
-            <Link
-              key={comp.slug}
-              href={`/competitions/${comp.slug}`}
-              className="border rounded-xl p-5 hover:shadow-lg transition"
-            >
-              {comp.poster && (
-                <img
-                  src={comp.poster}
-                  alt={comp.name}
-                  className="rounded-lg mb-4 aspect-video object-cover"
-                />
-              )}
+          {filteredCompetitions.map((comp) => {
+            const startDate = comp.startDate || comp.date;
+            const endDate = comp.endDate || comp.date;
+            const formattedDate = formatCompetitionDates(startDate, endDate);
 
-              <h3 className="text-lg font-semibold">{comp.name}</h3>
-
-              <p className="text-sm text-muted-foreground mt-1">
-                {comp.city}, {comp.country}
-              </p>
-
-              <p className="text-xs text-muted-foreground mt-1">
-                {new Date(comp.date).toDateString()}
-              </p>
-            </Link>
-          ))}
+            return <CompetitionCard comp={comp} />;
+          })}
         </div>
 
         {filteredCompetitions.length === 0 && (
-          <p className="text-center text-muted-foreground mt-12">
+          <p className="text-center text-gray-500 mt-12">
             No competitions found.
           </p>
         )}
+        <MissingCompetitionCTA />
       </div>
     </div>
   );

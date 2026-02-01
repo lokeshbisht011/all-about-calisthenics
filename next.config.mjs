@@ -12,6 +12,16 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'calisthenics-cup.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'wswcf.org',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
         hostname: 'plus.unsplash.com',
         pathname: '**',
       },

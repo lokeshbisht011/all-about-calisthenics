@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Top Calisthenics Gyms in Delhi",
     description:
-      "Discover Delhi’s premier calisthenics gyms and academies to push your limits and join a thriving fitness community.",
+      "Discover Delhi's premier calisthenics gyms and academies to push your limits and join a thriving fitness community.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1592639296346-560c37a0f711",

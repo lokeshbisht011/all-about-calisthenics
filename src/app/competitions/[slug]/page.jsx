@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import { competitions } from "@/lib/competitionData";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/Card";
+import Image from "next/image";
+import { formatCompetitionDates } from "@/lib/utils";
+import { MissingCompetitionCTA } from "@/components/competitions/MissingCompetitionCTA";
 
 export function generateMetadata({ params }) {
   const comp = competitions.find((c) => c.slug === params.slug);
@@ -20,34 +23,29 @@ export default function CompetitionPage({ params }) {
 
   const today = new Date();
 
+  // Determine if event is past based on endDate
+  const compEnd = comp.endDate ? new Date(comp.endDate) : new Date(comp.startDate || comp.date);
+  const isPast = compEnd < today;
+
   const upcomingComps = competitions.filter(
-    (c) => new Date(c.date) >= today && c.slug !== comp.slug
+    (c) => new Date(c.endDate || c.startDate || c.date) >= today && c.slug !== comp.slug
   );
 
   const pastComps = competitions.filter(
-    (c) => new Date(c.date) < today && c.slug !== comp.slug
+    (c) => new Date(c.endDate || c.startDate || c.date) < today && c.slug !== comp.slug
   );
 
   const sameCountryComps = competitions.filter(
     (c) => c.country === comp.country && c.slug !== comp.slug
   );
 
-  const isPast = new Date(comp.date) < today;
+  const formattedDate = formatCompetitionDates(comp.startDate || comp.date, comp.endDate);
 
   return (
     <div className="container mx-auto max-w-6xl px-4 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* MAIN */}
         <main className="lg:col-span-2 space-y-8">
-          {/* POSTER */}
-          {comp.poster && (
-            <img
-              src={comp.poster}
-              alt={comp.name}
-              className="rounded-2xl border w-full object-cover"
-            />
-          )}
-
           {/* HEADER */}
           <div className="space-y-3">
             <div className="flex flex-wrap items-center gap-3">
@@ -65,9 +63,21 @@ export default function CompetitionPage({ params }) {
             </div>
 
             <p className="text-muted-foreground">
-              {comp.city}, {comp.country} • {new Date(comp.date).toDateString()}
+              {comp.city}, {comp.country} • {formattedDate}
             </p>
           </div>
+
+          {/* POSTER */}
+          {comp.poster && (
+            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[500px] mx-auto overflow-hidden rounded-2xl border">
+              <Image
+                src={comp.poster}
+                alt={comp.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
 
           {/* DESCRIPTION */}
           {comp.description && (
@@ -168,12 +178,12 @@ export default function CompetitionPage({ params }) {
           )}
         </aside>
       </div>
+      <MissingCompetitionCTA />
     </div>
   );
 }
 
 /* ---------- SMALL COMPONENTS ---------- */
-
 function SidebarSection({ title, children }) {
   return (
     <div className="space-y-4">
@@ -190,6 +200,10 @@ function SidebarSection({ title, children }) {
 }
 
 function SidebarItem({ comp, showCity = false }) {
+  const start = comp.startDate || comp.date;
+  const end = comp.endDate || comp.date;
+  const formattedDate = formatCompetitionDates(start, end);
+
   return (
     <Link href={`/competitions/${comp.slug}`} className="block group">
       <Card className="transition-all hover:border-primary/40 hover:shadow-sm">
@@ -199,7 +213,7 @@ function SidebarItem({ comp, showCity = false }) {
           </div>
 
           <div className="text-xs text-muted-foreground">
-            {showCity ? comp.city : new Date(comp.date).toDateString()}
+            {showCity ? comp.city : formattedDate}
           </div>
         </CardContent>
       </Card>

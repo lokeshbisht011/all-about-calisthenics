@@ -2,7 +2,8 @@ export const competitions = [
   {
     slug: "calisthenics-cup-2026",
     name: "Calisthenics Cup 2026",
-    date: "2026-04-16",
+    startDate: "2026-04-16",
+    endDate: "2026-04-19",
     city: "Cologne",
     country: "Germany",
     poster: "https://calisthenics-cup.com/wp-content/uploads/2024/01/IMG_6845-scaled.jpg",
@@ -15,7 +16,8 @@ export const competitions = [
   {
     slug: "calisthenics-world-championship-2026",
     name: "Calisthenics World Championship 2026",
-    date: "2026-06-12",
+    startDate: "2026-06-12",
+    endDate: "2026-06-14",
     city: "Rome",
     country: "Italy",
     poster: "https://wswcf.org/wp-content/uploads/2026/01/logo_italia_2026-1_page-0001.jpg",
@@ -23,6 +25,34 @@ export const competitions = [
     website: "https://wswcf.org/",
     instagram: null,
     youtube: null,
+    results: null
+  },
+  {
+    slug: "ground-zero-championship-2026",
+    name: "Ground Zero Championship 2026",
+    startDate: "2026-01-09",
+    endDate: "2026-01-10",
+    city: "Bangalore",
+    country: "India",
+    poster: "/groundzero_2026.jpg",
+    description: "National Level Calisthenics Championship🏆 Hosted by Limitless Calisthenics",
+    website: "https://groundzeroweb.netlify.app/",
+    instagram: "https://www.instagram.com/groundzerochampionship/",
+    youtube: null,
+    results: null
+  },
+  {
+    slug: "sthenos-xbition-3",
+    name: "Sthenos Xbition 3",
+    startDate: "2025-05-30",
+    endDate: "2025-05-30",
+    city: "Lausanne",
+    country: "Switzerland",
+    poster: "/sthenos_3.jpg",
+    description: "The Sports Festival is one of the world's top Street Workout and Calisthenics Championships, bringing together elite athletes and thousands of spectators for an unforgettable multi-sport weekend. Featuring freestyle calisthenics, set & reps, Sthenos Strength War, weightlifting and powerlifting, the event showcases strength sports on the biggest stage.",
+    website: "",
+    instagram: "https://www.instagram.com/sthenosmovement/",
+    youtube: "https://www.youtube.com/@sthenosmovement",
     results: null
   },
 ];

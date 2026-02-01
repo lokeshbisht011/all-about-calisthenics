@@ -23,9 +23,9 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/">
           <img
-            src="/logo.png"
+            src="/logo_blue.png"
             alt="Logo"
-            className="w-10 h-10 md:w-12 md:h-12 cursor-pointer"
+            className="w-20 h-20 md:w-20 md:h-20 cursor-pointer"
           />
         </Link>
 
