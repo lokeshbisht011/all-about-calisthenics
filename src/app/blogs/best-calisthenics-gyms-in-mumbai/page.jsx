@@ -1,3 +1,4 @@
+import CoachingBanner from "@/components/CoachingBanner";
 import GymCard from "@/components/GymCard";
 import { MissingSpotCTA } from "@/components/MissingSpotCTA";
 import Image from "next/image";
@@ -24,6 +25,7 @@ export const metadata = {
 export default function Page() {
   return (
     <article className="mx-auto max-w-3xl px-4 pb-24 pt-16">
+      <CoachingBanner />
       <header className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">
           Best Calisthenics Gyms in Mumbai

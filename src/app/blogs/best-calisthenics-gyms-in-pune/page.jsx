@@ -1,3 +1,4 @@
+import CoachingBanner from "@/components/CoachingBanner";
 import GymCard from "@/components/GymCard";
 import { MissingSpotCTA } from "@/components/MissingSpotCTA";
 
@@ -26,6 +27,7 @@ export const metadata = {
 export default function Page() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-12">
+      <CoachingBanner />
       {/* Header */}
       <header className="mb-12">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight">

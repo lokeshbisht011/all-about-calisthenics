@@ -234,7 +234,7 @@ export const gyms = [
     name: "Strize Fitness",
     city: "Pune",
     image:
-      "https://lh5.googleusercontent.com/p/AF1QipNpxJ8Hx9H3YguepuRJCfrqMl-uXKoKogwApXYR=w408-h544-k-no",
+      "",
     locations: [
       { label: "Balewadi", map: "https://maps.app.goo.gl/BHFPjn9ZiaRurhhk9" },
     ],
