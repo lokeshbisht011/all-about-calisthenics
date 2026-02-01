@@ -12,7 +12,7 @@ export const gyms = [
       },
     ],
     description:
-      "Republic of Domination is a vibrant calisthenics sports club in Bengaluru, where people of all ages and fitness levels come together to learn, train, and compete in calisthenics.",
+      "Republic of Domination is a vibrant calisthenics gym in Bengaluru, where people of all ages and fitness levels come together to learn, train, and compete in calisthenics.",
     instagram: "https://www.instagram.com/republic_of_domination",
   },
   {
@@ -65,7 +65,7 @@ export const gyms = [
   },
   {
     slug: "calibaf-the-calisthenics-studio",
-    name: "CaliBAF – The Calisthenics Studio",
+    name: "CaliBAF - The Calisthenics Studio",
     city: "Bangalore",
     image:
       "https://lh5.googleusercontent.com/p/AF1QipO9DDaRJp9vYnCOvFLpIZP4wOCD-WizzNxBEeNX",

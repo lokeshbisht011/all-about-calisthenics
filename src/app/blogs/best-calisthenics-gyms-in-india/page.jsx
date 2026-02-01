@@ -183,7 +183,7 @@ export default function Page() {
               map: "https://maps.app.goo.gl/BHFPjn9ZiaRurhhk9",
             },
           ]}
-          description="Strize Fitness is one of India’s highest altitude calisthenics training centers."
+          description="Strize Fitness is one of India's highest altitude calisthenics training centers."
           instagram="https://www.instagram.com/strizefitness"
         />
         <GymCard

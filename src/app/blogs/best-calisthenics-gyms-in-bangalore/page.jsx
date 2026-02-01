@@ -48,7 +48,7 @@ export default function Page() {
             map: "https://maps.app.goo.gl/xrakRk2YAnrX9HSd7",
           },
         ]}
-        description="Republic of Domination is a vibrant calisthenics sports club in Bengaluru, where people of all ages and fitness levels can come together to learn and compete in calisthenics..."
+        description="Republic of Domination is a vibrant calisthenics gym in Bengaluru, where people of all ages and fitness levels come together to learn, train, and compete in calisthenics."
         instagram="https://www.instagram.com/republic_of_domination"
       />
 
@@ -61,7 +61,7 @@ export default function Page() {
             map: "https://maps.app.goo.gl/mWh2dhuqwqeWb4yM9",
           },
         ]}
-        description="Engage in real-life movements for functional strength and mobility..."
+        description="CaliOG focuses on functional strength, mobility, and real-life movement patterns with customizable programs for all levels."
         website="https://caliog.in/"
         instagram="https://www.instagram.com/caliog.in"
       />
@@ -74,7 +74,7 @@ export default function Page() {
             map: "https://maps.app.goo.gl/GiQzrUFAq5AuCoU17",
           },
         ]}
-        description="Kineto Calisthenics Park was founded on Jan 15, 2023..."
+        description="Kineto Calisthenics Park was founded on Jan 15, 2023, with the motto to spread calisthenics among South Bangalore residents and encourage athletes to compete nationally and globally."
         website="http://www.kinetocalisthenics.com/"
         instagram="https://www.instagram.com/kineto_calisthenics/"
       />
@@ -88,13 +88,13 @@ export default function Page() {
             map: "https://maps.app.goo.gl/QLTYL1esULrH66Jd9",
           },
         ]}
-        description="Chaos Faktory is India's leading professional parkour team..."
+        description="Chaos Faktory is India's leading professional parkour and bodyweight training center, blending parkour, martial arts, gymnastics, calisthenics, and ninja training."
         website="https://chaosfaktory.com/"
         instagram="https://www.instagram.com/chaosfaktory/"
       />
 
       <GymCard
-        name="CaliBAF – The Calisthenics Studio"
+        name="CaliBAF - The Calisthenics Studio"
         image="https://lh5.googleusercontent.com/p/AF1QipO9DDaRJp9vYnCOvFLpIZP4wOCD-WizzNxBEeNX"
         locations={[
           {
@@ -102,7 +102,7 @@ export default function Page() {
             map: "https://maps.app.goo.gl/TroDC7T1CCzJJ5Cp8",
           },
         ]}
-        description="CaliBAF studio is designed to help you push your limits..."
+        description="CaliBAF studio helps you push your limits with expert guidance and personalized training programs."
         website="https://www.calibaf.in/"
         instagram="https://www.instagram.com/calisthenicsbybaf/"
       />
@@ -133,7 +133,7 @@ export default function Page() {
             map: "https://maps.app.goo.gl/Pi66fdLLGa92Wdsf8",
           },
         ]}
-        description="At Movement gyms, you will experience an environment where you are free to work out..."
+        description="At Movement gyms, you will experience an environment where you are free to work out your way with trained professionals ready to guide you."
         website="https://www.bethemovement.in/"
         instagram="https://www.instagram.com/themovement.fitnesscentre/"
       />
