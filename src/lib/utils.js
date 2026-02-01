@@ -37,3 +37,5 @@ export function formatCompetitionDates(startDate, endDate) {
     options
   )} - ${end.toLocaleDateString("en-US", options)}`;
 }
+
+export const slugify = (str) => str.toLowerCase().replace(/\s+/g, "-");

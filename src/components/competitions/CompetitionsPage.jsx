@@ -148,12 +148,12 @@ export const CompetitionsPage = () => {
 
         {/* RESULTS */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCompetitions.map((comp) => {
+          {filteredCompetitions.map((comp, index) => {
             const startDate = comp.startDate || comp.date;
             const endDate = comp.endDate || comp.date;
             const formattedDate = formatCompetitionDates(startDate, endDate);
 
-            return <CompetitionCard comp={comp} />;
+            return <CompetitionCard key={index} comp={comp} />;
           })}
         </div>
 

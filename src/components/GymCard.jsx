@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export default function GymCard({
   name,
+  slug,
   image,
   locations,
   description,
@@ -11,7 +12,9 @@ export default function GymCard({
 }) {
   return (
     <section className="mt-10">
-      <h2 className="text-xl font-semibold">{name}</h2>
+      <Link href={`/gyms/${slug}`}>
+        <h2 className="text-xl font-semibold">{name}</h2>
+      </Link>
 
       <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-xl border">
         <Image
@@ -41,7 +44,9 @@ export default function GymCard({
         </p>
       </div>
 
-      <p className="mt-4 leading-relaxed text-muted-foreground">{description}</p>
+      <p className="mt-4 leading-relaxed text-muted-foreground">
+        {description}
+      </p>
 
       <div className="mt-4 flex flex-wrap gap-4 text-sm">
         {website && (

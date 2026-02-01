@@ -1,5 +1,6 @@
 import { competitions } from '@/lib/competitionData';
 import { gyms } from '@/lib/gymsData';
+import { slugify } from '@/lib/utils';
 import { allBlogs } from 'contentlayer/generated';
 
 export default async function sitemap() {
@@ -14,6 +15,14 @@ export default async function sitemap() {
     url: `${baseUrl}/gyms/${gym.slug}`,
     lastModified: new Date().toISOString(),
   }));
+
+  const gymCityUrls = Array.from(
+    new Set(gyms.map((g) => g.city).filter(Boolean))
+  ).map((city) => ({
+    url: `${baseUrl}/gyms/city/${slugify(city)}`,
+    lastModified: new Date().toISOString(),
+  }));
+
 
   const competitionUrls = competitions.map((comp) => ({
     url: `${baseUrl}/competitions/${comp.slug}`,
@@ -36,8 +45,9 @@ export default async function sitemap() {
     { url: `${baseUrl}/glossary`, lastModified: new Date() },
     { url: `${baseUrl}/one-rep-max-calculator`, lastModified: new Date() },
     { url: `${baseUrl}/gyms`, lastModified: new Date() },
+    { url: `${baseUrl}/gyms/city`, lastModified: new Date() },
     { url: `${baseUrl}/competitions`, lastModified: new Date() },
   ];
   
-  return [...blogPages, ...staticPages, ...gymUrls, ...competitionUrls, ...countryCompetitionUrls];
+  return [...blogPages, ...staticPages, ...gymUrls,  ...competitionUrls, ...countryCompetitionUrls, ...gymCityUrls,];
 }

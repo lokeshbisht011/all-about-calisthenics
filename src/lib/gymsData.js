@@ -14,6 +14,7 @@ export const gyms = [
     description:
       "Republic of Domination is a vibrant calisthenics gym in Bengaluru, where people of all ages and fitness levels come together to learn, train, and compete in calisthenics.",
     instagram: "https://www.instagram.com/republic_of_domination",
+    country: "India",
   },
   {
     slug: "caliog",
@@ -31,6 +32,7 @@ export const gyms = [
       "CaliOG focuses on functional strength, mobility, and real-life movement patterns with customizable programs for all levels.",
     website: "https://caliog.in/",
     instagram: "https://www.instagram.com/caliog.in",
+    country: "India",
   },
   {
     slug: "kineto-calisthenics-park",
@@ -48,6 +50,7 @@ export const gyms = [
       "Kineto Calisthenics Park was founded on Jan 15, 2023, with the motto to spread calisthenics among South Bangalore residents and encourage athletes to compete nationally and globally.",
     website: "http://www.kinetocalisthenics.com/",
     instagram: "https://www.instagram.com/kineto_calisthenics/",
+    country: "India",
   },
   {
     slug: "chaos-faktory",
@@ -56,12 +59,16 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipMSEbHmpMbdjuJ9PDGBqadMU9Kul4VdD6ul-sLb",
     locations: [
-      { label: "HSR Layout", map: "https://maps.app.goo.gl/QLTYL1esULrH66Jd9" },
+      {
+        label: "HSR Layout",
+        map: "https://maps.app.goo.gl/QLTYL1esULrH66Jd9",
+      },
     ],
     description:
       "Chaos Faktory is India's leading professional parkour and bodyweight training center, blending parkour, martial arts, gymnastics, calisthenics, and ninja training.",
     website: "https://chaosfaktory.com/",
     instagram: "https://www.instagram.com/chaosfaktory/",
+    country: "India",
   },
   {
     slug: "calibaf-the-calisthenics-studio",
@@ -79,6 +86,7 @@ export const gyms = [
       "CaliBAF studio helps you push your limits with expert guidance and personalized training programs.",
     website: "https://www.calibaf.in/",
     instagram: "https://www.instagram.com/calisthenicsbybaf/",
+    country: "India",
   },
   {
     slug: "limitless-calisthenics",
@@ -87,11 +95,15 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipNxEaWkvdkS9VqmFGtZ5sfzUdS_S6m-vY0XmnmV",
     locations: [
-      { label: "BTM Layout", map: "https://maps.app.goo.gl/hN4F7F2D5PUxu8k79" },
+      {
+        label: "BTM Layout",
+        map: "https://maps.app.goo.gl/hN4F7F2D5PUxu8k79",
+      },
     ],
     description:
       "Calisthenics academy with certified coaches and national-level athletes.",
     instagram: "https://www.instagram.com/limitless_calisthenics/",
+    country: "India",
   },
   {
     slug: "the-movement-fitness-centre",
@@ -100,16 +112,21 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipNvy8r0w24-25CCiwKdLRz_EmnMLKnWQsuSpkTO",
     locations: [
-      { label: "HSR Layout", map: "https://maps.app.goo.gl/NrBEcNBBup7FJ6Gg8" },
-      { label: "Sarjapur", map: "https://maps.app.goo.gl/Pi66fdLLGa92Wdsf8" },
+      {
+        label: "HSR Layout",
+        map: "https://maps.app.goo.gl/NrBEcNBBup7FJ6Gg8",
+      },
+      {
+        label: "Sarjapur",
+        map: "https://maps.app.goo.gl/Pi66fdLLGa92Wdsf8",
+      },
     ],
     description:
       "At Movement gyms, you will experience an environment where you are free to work out your way with trained professionals ready to guide you.",
     website: "https://www.bethemovement.in/",
     instagram: "https://www.instagram.com/themovement.fitnesscentre/",
+    country: "India",
   },
-
-  // ---------- Mumbai ----------
   {
     slug: "elysium-calisthenics-park",
     name: "Elysium Calisthenics Park",
@@ -121,12 +138,16 @@ export const gyms = [
         label: "Malad West, Bandra West",
         map: "https://maps.app.goo.gl/GGQs7dXoxpJqXhGRA",
       },
-      { label: "Malad West", map: "https://maps.app.goo.gl/k4zS5jxdxvHJD8u39" },
+      {
+        label: "Malad West",
+        map: "https://maps.app.goo.gl/k4zS5jxdxvHJD8u39",
+      },
     ],
     description:
       "India's first official calisthenics and street workout park, founded in 2018 to spread awareness about calisthenics and provide a platform for athletes.",
     website: "https://elysiumcalipark.com/",
     instagram: "https://www.instagram.com/elysiumcalipark",
+    country: "India",
   },
   {
     slug: "isc-indian-school-of-calisthenics",
@@ -135,12 +156,16 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipPbUZVc4p3z-T_Y4gr-Tq8gofU-EvzfiAuQpXO3=w408-h550-k-no",
     locations: [
-      { label: "Goregaon", map: "https://maps.app.goo.gl/e42hqfeKAf9aiHeo7" },
+      {
+        label: "Goregaon",
+        map: "https://maps.app.goo.gl/e42hqfeKAf9aiHeo7",
+      },
     ],
     description:
       "ISC provides a holistic approach to fitness to empower individuals and foster independence, focusing on training mind and body.",
     website: "https://indianschoolofcalisthenics.com/",
     instagram: "https://www.instagram.com/isc.official_",
+    country: "India",
   },
   {
     slug: "bar-breed-calisthenics-park",
@@ -157,6 +182,7 @@ export const gyms = [
     description:
       "Borivali's first calisthenics park, designed to provide a space for enthusiasts to train and excel in their fitness journey.",
     instagram: "https://www.instagram.com/barbreed.bombay",
+    country: "India",
   },
   {
     slug: "360-calisthenics",
@@ -165,11 +191,15 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipPiO4bYBNkDwYRFDJyfHifFITHQnXoBgkOHDis9=w408-h725-k-no",
     locations: [
-      { label: "Malad West", map: "https://maps.app.goo.gl/g89i9Fgrpw2eivoe8" },
+      {
+        label: "Malad West",
+        map: "https://maps.app.goo.gl/g89i9Fgrpw2eivoe8",
+      },
     ],
     description:
       "360 Calisthenics offers a comprehensive calisthenics experience in Malad West with a range of equipment and facilities.",
     instagram: "https://www.instagram.com/360calisthenix/",
+    country: "India",
   },
   {
     slug: "califit-calisthenics-park",
@@ -178,14 +208,16 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipMCEz3ohFSNRkrGuL138wwTumma7yaws8GRz_uV=w408-h544-k-no",
     locations: [
-      { label: "Vikhroli", map: "https://maps.app.goo.gl/297tEUZLYC8Cq7Cg6" },
+      {
+        label: "Vikhroli",
+        map: "https://maps.app.goo.gl/297tEUZLYC8Cq7Cg6",
+      },
     ],
     description:
       "The first calisthenics park in Vikhroli, offering a dedicated space for bodyweight training and fitness enthusiasts.",
     instagram: "https://www.instagram.com/califit___/",
+    country: "India",
   },
-
-  // ---------- Pune ----------
   {
     slug: "zenith-calipark",
     name: "Zenith Calipark",
@@ -193,11 +225,15 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipPcTCHTK_6q7mB0lHfSvA87uYJxByQPAyKNRP52=w408-h907-k-no",
     locations: [
-      { label: "Wakad", map: "https://maps.app.goo.gl/d3zL2XFs6hLmTzMM6" },
+      {
+        label: "Wakad",
+        map: "https://maps.app.goo.gl/d3zL2XFs6hLmTzMM6",
+      },
     ],
     description:
       "Zenith Calipark is the first calisthenics park in PCMC, offering state-of-the-art facilities for bodyweight training and community-focused fitness.",
     instagram: "https://www.instagram.com/zenithcalipark",
+    country: "India",
   },
   {
     slug: "alphanation-calisthenics-gym",
@@ -214,6 +250,7 @@ export const gyms = [
     description:
       "AlphaNation offers a holistic fitness experience curated by international athletes and exercise physiology experts, focusing on calisthenics and strength training.",
     instagram: "https://www.instagram.com/alphanation.calisthenics",
+    country: "India",
   },
   {
     slug: "musclebar",
@@ -222,25 +259,32 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipMrqY_Dx5uL6jR1-xe1P5RUL5sgh_aPziQGiJ4u=w408-h272-k-no",
     locations: [
-      { label: "Ghorpadi", map: "https://maps.app.goo.gl/CeZeLMbzK7jVWKKx8" },
+      {
+        label: "Ghorpadi",
+        map: "https://maps.app.goo.gl/CeZeLMbzK7jVWKKx8",
+      },
     ],
     description:
       "MuscleBar, launched in 2019, combines natural light and seasoned equipment for intense calisthenics workouts.",
     website: "https://www.musclebar.in",
     instagram: "https://www.instagram.com/musclebar.pune",
+    country: "India",
   },
   {
     slug: "strize-fitness",
     name: "Strize Fitness",
     city: "Pune",
-    image:
-      "",
+    image: "",
     locations: [
-      { label: "Balewadi", map: "https://maps.app.goo.gl/BHFPjn9ZiaRurhhk9" },
+      {
+        label: "Balewadi",
+        map: "https://maps.app.goo.gl/BHFPjn9ZiaRurhhk9",
+      },
     ],
     description:
       "Strize Fitness is known as India's highest altitude calisthenics center, offering a specialized environment for fitness enthusiasts.",
     instagram: "https://www.instagram.com/strizefitness",
+    country: "India",
   },
   {
     slug: "cali-keeda",
@@ -262,14 +306,13 @@ export const gyms = [
       "Cali Keeda emphasizes health, nutrition, and lifestyle transformation through calisthenics training.",
     website: "https://calikeeda.com",
     instagram: "https://www.instagram.com/calikeeda",
+    country: "India",
   },
-
-  // ---------- Delhi ----------
   {
     slug: "workout-warriors-calisthenics-academy",
     name: "Workout Warriors Calisthenics Academy",
     city: "Delhi",
-    image: "/images/placeholder.jpg",
+    image: "",
     locations: [
       {
         label: "Bhalswa Jahangir Village",
@@ -279,18 +322,23 @@ export const gyms = [
     description:
       "Workout Warriors provides a dedicated space for calisthenics enthusiasts in Delhi to train and improve their skills.",
     instagram: "https://www.instagram.com/workout_warriors_official/",
+    country: "India",
   },
   {
     slug: "alphapack-calisthenics-academy",
     name: "AlphaPack Calisthenics Academy",
     city: "Delhi",
-    image: "/images/placeholder.jpg",
+    image: "",
     locations: [
-      { label: "Vikaspuri", map: "https://maps.app.goo.gl/3578q9ejzFLjrnau5" },
+      {
+        label: "Vikaspuri",
+        map: "https://maps.app.goo.gl/3578q9ejzFLjrnau5",
+      },
     ],
     description:
       "Delhi's first official Calisthenics Centre offering bodyweight training and skill development.",
     instagram: "https://www.instagram.com/alphapack.academy/",
+    country: "India",
   },
   {
     slug: "indian-calisthenics-academy",
@@ -299,12 +347,16 @@ export const gyms = [
     image:
       "https://static.wixstatic.com/media/d1d3b0_fdb11ce13e894877874dca5be470a2d6~mv2.png/v1/fill/w_762,h_756,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/IMG_8579_PNG.png",
     locations: [
-      { label: "Dwarka", map: "https://maps.app.goo.gl/xbDgr9t8krp3RyFR6" },
+      {
+        label: "Dwarka",
+        map: "https://maps.app.goo.gl/xbDgr9t8krp3RyFR6",
+      },
     ],
     description:
       "Founded by Siddharth Tyagi, Winner of Calisthenics World Cup 2019. Supports young athletes and promotes calisthenics for a healthy lifestyle.",
     website: "https://www.indiancalisthenicsacademy.in/",
     instagram: "https://www.instagram.com/indian_calisthenics_academy/",
+    country: "India",
   },
   {
     slug: "permafly",
@@ -313,11 +365,99 @@ export const gyms = [
     image:
       "https://lh5.googleusercontent.com/p/AF1QipMsGT34vtfaHQT5i5Mv2r-z5XKnn-jt8h77LBeT=w408-h455-k-no",
     locations: [
-      { label: "Shahdara", map: "https://maps.app.goo.gl/4TTYjkgABGYVK3ZZ6" },
+      {
+        label: "Shahdara",
+        map: "https://maps.app.goo.gl/4TTYjkgABGYVK3ZZ6",
+      },
     ],
     description:
       "PERMAFLY is a pioneer Calisthenics, Gymnastics, Parkour, and Yoga academy in Delhi, the first Calisthenics academy established in the city.",
     website: "https://www.permafly.in/",
     instagram: "https://www.instagram.com/permaflydelhi/",
+    country: "India",
+  },
+  {
+    slug: "calisthenics-lab-india",
+    name: "Calisthenics Lab India",
+    city: "Hyderabad",
+    image:
+      "https://lh3.googleusercontent.com/p/AF1QipOiTzfZrzguoFvPQ4AfOIfp7vQqONbMrXUGTOc7=w426-h240-k-no",
+    locations: [
+      {
+        label: "Kondapur",
+        map: "https://maps.app.goo.gl/GrzDypG9kbavj8Nk6",
+      },
+    ],
+    description:
+      "Calisthenics Lab India offers international-level coaching with a premium training space for calisthenics, Zumba, yoga, and animal flow.",
+    instagram: "https://www.instagram.com/calisthenics.lab.india/",
+    country: "India",
+  },
+  {
+    slug: "indian-calisthenics-chamber-icc",
+    name: "Indian Calisthenics Chamber (ICC)",
+    city: "Hyderabad",
+    image:
+      "https://lh3.googleusercontent.com/p/AF1QipO2m3xzou3ZgwtJOdYVmk8wxTeDG-vkUsv7EPe5=w408-h272-k-no",
+    locations: [
+      {
+        label: "Madhapur",
+        map: "https://maps.app.goo.gl/sn5cRv6Ds7BTGKpD7",
+      },
+    ],
+    description:
+      "Indian Calisthenics Chamber (ICC) trains athletes under the guidance of national-level calisthenics competitors.",
+    instagram: "https://www.instagram.com/icc_hyderabad/",
+    country: "India",
+  },
+  {
+    slug: "kratos-calisthenics-arena",
+    name: "Kratos Calisthenics Arena",
+    city: "Hyderabad",
+    image:
+      "https://jekmupbkimxtsqgdwamt.supabase.co/storage/v1/object/public/media/1751215124166-9gj5esxrc5r.jpg",
+    locations: [
+      {
+        label: "Kondapur",
+        map: "https://maps.app.goo.gl/oaZgJrF9uPRti1tv5",
+      },
+    ],
+    description:
+      "Kratos Calisthenics Arena is Hyderabad’s premier bodyweight training hub, focused on strength, discipline, and pure movement. Suitable for beginners and advanced athletes alike.",
+    website: "https://kratoscaliarena.com/",
+    instagram: "https://www.instagram.com/kratoscaliarena",
+    country: "India",
+  },
+  {
+    slug: "raw-strength-calisthenics",
+    name: "Raw Strength Calisthenics",
+    city: "Hyderabad",
+    image: "",
+    locations: [
+      {
+        label: "Madhapur",
+        map: "https://maps.app.goo.gl/kUuXPJfDcnvupMQi8",
+      },
+    ],
+    description:
+      "Raw Strength Calisthenics focuses on developing raw bodyweight strength and athletic performance through structured calisthenics training.",
+    instagram: "https://www.instagram.com/rawstrength_calisthenics",
+    country: "India",
+  },
+  {
+    slug: "limitless-strength",
+    name: "Limitless Strength",
+    city: "Hyderabad",
+    image: "",
+    locations: [
+      {
+        label: "Gandhi Nagar",
+        map: "https://maps.app.goo.gl/inTNFiBT2Mevdr1X6",
+      },
+    ],
+    description:
+      "Limitless Strength delivers hybrid training that blends strength training and calisthenics, helping athletes build muscle, lose fat, and improve performance.",
+    instagram: "https://www.instagram.com/limitless_strength__/",
+    country: "India",
   },
 ];
