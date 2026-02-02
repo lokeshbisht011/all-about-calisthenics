@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article className="mx-auto max-w-3xl px-4 pb-24 pt-16">
+    <article className="mx-auto max-w-3xl px-4 py-12">
       <CoachingBanner />
       <header className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">

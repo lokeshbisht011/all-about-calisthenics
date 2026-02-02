@@ -29,7 +29,7 @@ const page = async ({ params }) => {
   const doc = await getDocFromParams(params.slug);
   return (
     <div>
-      <div className="mx-auto max-w-2xl p-5 mt-5 mb-5 bg-gray-50 shadow-lg text-black">
+      <div className="mx-auto max-w-3xl px-4 py-12 text-black">
         <div className="md:h-72 md:w-full h-[180px] w-full relative mb-5">
           <Image src={doc.images.cover} fill className="object-cover" />
         </div>

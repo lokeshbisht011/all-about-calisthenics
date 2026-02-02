@@ -26,7 +26,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article className="mx-auto max-w-4xl px-4 py-12">
+    <article className="mx-auto max-w-3xl px-4 py-12">
       <CoachingBanner />
       {/* Header */}
       <header className="mb-12">
