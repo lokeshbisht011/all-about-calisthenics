@@ -53,8 +53,8 @@ export default function RootLayout({ children }) {
         <Script
           src="https://quge5.com/88/tag.min.js"
           data-zone="209232"
+          async
           data-cfasync="false"
-          strategy="afterInteractive"
         />
 
         <Footer />
