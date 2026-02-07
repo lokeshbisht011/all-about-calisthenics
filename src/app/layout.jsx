@@ -19,6 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <Script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="209232"
+          async
+          data-cfasync="false"
+        ></Script>
+        <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
         />
