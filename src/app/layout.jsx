@@ -50,12 +50,17 @@ export default function RootLayout({ children }) {
         />
 
         {/* Monetag */}
-        <Script
-          src="https://quge5.com/88/tag.min.js"
-          data-zone="209232"
-          async
-          data-cfasync="false"
-        />
+        <Script id="monetag-vignette" strategy="afterInteractive">
+          {`
+            (function(s){
+              s.dataset.zone='10582009';
+              s.src='https://gizokraijaw.net/vignette.min.js';
+            })([document.documentElement, document.body]
+              .filter(Boolean)
+              .pop()
+              .appendChild(document.createElement('script')));
+          `}
+        </Script>
 
         <Footer />
       </body>
