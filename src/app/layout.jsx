@@ -17,39 +17,45 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <body className={inter.className}>
+        {/* Google Analytics */}
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
         />
-
         <Script id="ga-script" strategy="lazyOnload">
           {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${process.env.GOOGLE_ANALYTICS_TAG}')
-        `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GOOGLE_ANALYTICS_TAG}');
+          `}
         </Script>
+
+        {/* Google AdSense */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4080624113623119"
-          crossorigin="anonymous"
-        ></Script>
-      </head>
-      <body className={`${inter.className}`}>
+          crossOrigin="anonymous"
+        />
+
         <Navbar />
+
         {children}
+
+        {/* Tally */}
         <Script
           src="https://tally.so/widgets/embed.js"
           strategy="afterInteractive"
         />
+
+        {/* Monetag */}
         <Script
           src="https://quge5.com/88/tag.min.js"
           data-zone="209232"
           data-cfasync="false"
           strategy="afterInteractive"
-        ></Script>
+        />
 
         <Footer />
       </body>
