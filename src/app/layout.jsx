@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "All About Calisthenics",
   description: "Learn everything about Calisthenics",
+  other: {
+    monetag: "9bf3e87d24a7cfba0e5d261d1d910034",
+  },
 };
 
 export default function RootLayout({ children }) {
