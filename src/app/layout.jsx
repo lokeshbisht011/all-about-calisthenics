@@ -75,6 +75,18 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
+        <Script id="monetag-push" strategy="afterInteractive">
+          {`
+            (function(s){
+              s.dataset.zone = '10602900';
+              s.src = 'https://3nbf4.com/act/files/tag.min.js';
+            })([document.documentElement, document.body]
+              .filter(Boolean)
+              .pop()
+              .appendChild(document.createElement('script')));
+          `}
+        </Script>
+
         <Footer />
       </body>
     </html>
